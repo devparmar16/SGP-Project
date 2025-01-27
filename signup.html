@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>College ID Sign Up</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            height: 100vh;
+            background: url("https://1drv.ms/i/s!AtmNroOSlx8dd3wAaUGYrtjoq1M?embed=1&width=1134&height=474") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .imgcontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            height: 95%;
+            aspect-ratio: 4 / 3;
+            background: url("https://1drv.ms/i/s!AtmNroOSlx8dedZ5vKb8PPO7fJc?embed=1&width=961&height=1080") no-repeat center center/cover;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 80%;
+            max-width: 350px;
+        }
+        
+        .container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .container input[type="text"],
+        .container input[type="password"],
+        .container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .container button:hover {
+            background-color: #0056b3;
+        }
+        
+        .container p {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .container a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        
+        .container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="imgcontainer">
+        <div class="container">
+            <h2>Sign Up for CampusEase</h2>
+            <input type="text" id="fullName" placeholder="Enter Full Name">
+            <input type="text" id="collegeId" placeholder="Enter College ID">
+            <input type="email" id="email" placeholder="Enter Email">
+            <input type="password" id="password" placeholder="Create Password">
+            <button onclick="redirectToLogin()">Sign Up</button>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        function redirectToLogin() {
+            const fullName = document.getElementById("fullName").value;
+            const collegeId = document.getElementById("collegeId").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (!fullName || !collegeId || !email || !password) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Redirect to a confirmation page or process the sign-up data
+            alert("Sign-up successful! Redirecting to login page...");
+            window.location.href = "main.html";
+        }
+    </script>
+</body>
+
+</html>
